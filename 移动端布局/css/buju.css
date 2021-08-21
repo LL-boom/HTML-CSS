@@ -1,0 +1,152 @@
+/* 重置CSS样式 */
+*{margin: 0;padding: 0;}
+img{vertical-align: middle; height: 6rem;}
+input,button{border: none;}/* 无外边框 */
+
+/* 设定rem标准大小 */
+html{
+	font-size: 10px;
+	background-color: #f6f6f6;
+}
+
+/* 顶部header样式 */
+header{
+	height: 9rem;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;/* 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐 */
+}
+
+header div:nth-child(1){
+	text-align: center;
+	width: 6rem;
+	line-height: 9rem;/* 图片垂直居中 */
+}
+header div:nth-child(2){
+	flex-grow: 1;/* 中间div自适应长度 */
+	display: flex;
+	align-items: center;/* 元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。 */
+	margin: 0 5rem;
+}
+header div:nth-child(2) .option{
+	background-color: white;
+	height: 4rem;
+	padding: 1rem 1rem 1rem 4rem;
+	display: flex;
+	border-right: solid 0.1rem #aaa;
+	border-top-left-radius: 3rem;/* 添加圆角 */
+	border-bottom-left-radius: 3rem;
+	align-items: center;/* 侧轴居中 */
+}
+header div:nth-child(2) .option span:nth-child(1){
+	line-height: 4rem;/* 文字居中 */
+	font-size: 2.6rem;
+}
+header div:nth-child(2) .input-wrapper{
+	flex-grow: 1;/* 自适应长度 */
+}
+header div:nth-child(2) .input-wrapper input{
+	border-top-right-radius: 3rem;/* 添加圆角 */
+	border-bottom-right-radius: 3rem;
+	/* 添加输入框样式 */
+	padding-left: 2.2rem;
+	width: 100%; height: 6rem;
+	box-sizing: border-box;/* 设置的边框和内边距的值是包含在width内的 */
+	font-size: 2.6rem;
+}
+header div:nth-child(3){
+	text-align: center;
+	width: 9rem;
+	line-height: 9rem;
+	color: #ccc;
+	font-size: 3.2rem;
+}
+p.search-history{
+	padding: 0.2rem;
+	height: 9rem;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;/* 均匀分配弹性元素 */
+	align-items: center;/* 侧轴居中 */
+	border-bottom: solid 1px #ccc;/* 下边框 */
+}
+p.search-history span:nth-child(1){/* “历史搜索”样式 */
+	font-size: 2.8rem; color: #888;
+}
+span.icon-ashbin{
+	font-size: 2.8rem;
+	color: #888
+}
+.search-history-items{
+	padding: 2.8rem 0;
+	display: flex;
+	flex-wrap: wrap;/* 换行 */
+	justify-content: space-between;/* 均匀分配弹性元素 */
+	background-color: white;
+}
+.search-history-items::after{
+	content: "";
+	display: block;/* 添加看不见的伪元素 解决最后一行左对齐问题 */
+	flex-grow: 1;
+}
+.search-history-items span{
+	color: #555;
+	background-color: #f2f2f2;
+	font-size: 2.4rem;
+	padding: 1rem 2.2rem;
+	border-radius: 2.8rem;
+	margin: 0 1.1rem 2.8rem;
+}
+.favirate{
+	margin-top: 10rem;
+	height: 9rem;
+	line-height: 9rem;
+	text-align: center;
+	background-color: white;
+	position: relative;
+	font-size: 3.2rem;
+	color: #F07A1A;
+}
+/* 利用伪元素划出底线 */
+.favirate::after{	
+	content: "";
+	display: block;
+	width: 70rem;
+	height: 0.1rem;
+	background-color: #bbb;
+	position: absolute;
+	left: 0;right: 0;
+	margin: auto;/* 居中 */
+}
+.favirate-items{
+	background-color: white;
+	padding-bottom: 7.5rem;
+}
+.favirate-items p{
+	padding: 3rem 0 0;
+	display: flex;
+	justify-content: center;/* 均匀分配弹性元素 */
+}
+.favirate-items p span{
+	padding: 0.8rem 1.3rem;
+	border: 1px solid #aaa;
+	border-radius: 5rem;
+	font-size: 2.4rem;
+	margin: 0 0.8rem;
+	color: #666;
+}
+
+.confirm{
+	background-color: white;
+	padding-bottom: 3rem;
+	margin-bottom: 18rem;
+	text-align: center;
+}
+.confirm .confirm-button{
+	width: 20rem;
+	height: 8rem;
+	border-radius: 2rem;
+	background-color: #EF9A49;
+	color: white;
+	font-size: 2.8rem;
+}
