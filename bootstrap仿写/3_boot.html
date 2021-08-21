@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        [class*=col]{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row"><!-- 响应式水平均匀 -->
+            <div class="col">aaa</div>
+            <div class="col">bbb</div>
+            <div class="col">ccc</div>
+        </div>
+        <div class="row"><!-- 分辨率小时一列，大于某水平排列 -->
+            <div class="col-sm">aaa</div>
+            <div class="col-sm">bbb</div>
+            <div class="col-sm">ccc</div>
+        </div>
+        <div class="row">
+            <div class="col-4">aaa</div>
+            <div class="col-4">bbb</div>
+            <div class="col-4">ccc</div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">aaa</div>
+            <div class="col-md-5">bbb</div>
+            <div class="col-md-5">ccc</div>
+        </div>
+        <div class="row">
+            <div class="col-auto">aaa</div>
+            <div class="col-6">bbb</div>
+            <div class="col-6">ccc</div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        bbb
+    </div>
+</body>
+</html>
